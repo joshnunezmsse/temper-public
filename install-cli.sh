@@ -62,6 +62,7 @@ cat << EOF > "$TEMP_SCRIPT_PATH"
 
 LICENSE_KEY="\${TEMPER_LICENSE_KEY:-$DEFAULT_KEY}"
 BILLING_URL="\${TEMPER_BILLING_URL:-https://api.tempermcp.dev/v1/heartbeat}"
+IMAGE_NAME="\${TEMPER_IMAGE:-joshnunezmsse/temper-mcp:${MCP_LANG}}"
 
 # The agent will execute this command in the context of the workspace root, 
 # so \$(pwd) accurately reflects the codebase we want to test.
@@ -70,7 +71,7 @@ exec "$DOCKER_BIN" run -i --rm \
   -e TEMPER_LICENSE_KEY="\$LICENSE_KEY" \
   -e TEMPER_BILLING_URL="\$BILLING_URL" \
   -v "\$(pwd):/code" \
-  temper-mcp:${MCP_LANG}
+  "\$IMAGE_NAME"
 EOF
 
 chmod +x "$TEMP_SCRIPT_PATH"
