@@ -13,11 +13,13 @@ To make it easier to configure your AI Agent (like Gemini Code Assist or Claude 
 ### Quick Install (Recommended)
 Run the following command in your terminal to download and run the installer automatically.
 
+macOS and Linux
 ```bash
-# macOS and Linux
 curl -fsSL https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-cli.sh | bash
+```
 
-# Windows (PowerShell)
+Windows (PowerShell)
+```bash
 irm https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-cli.ps1 | iex
 ```
 
