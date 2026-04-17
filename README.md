@@ -11,14 +11,14 @@ This is the core implementation of TemperMCP, delivered via the Model Context Pr
 To make it easier to configure your AI Agent (like Gemini Code Assist or Claude Desktop), you can install a global `temper-mcp` CLI wrapper. This handles the complex Docker volume mounts automatically.
 
 ### Quick Install (Recommended)
-Run the following command in your terminal to download and run the installer automatically. *(Note: Replace `YOUR_GITHUB_ORG` with the actual GitHub namespace once published).*
+Run the following command in your terminal to download and run the installer automatically.
 
 ```bash
 # macOS and Linux
-curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_ORG/temper-public/main/install-cli.sh | bash
+curl -fsSL https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-cli.sh | bash
 
 # Windows (PowerShell)
-irm https://raw.githubusercontent.com/YOUR_GITHUB_ORG/temper-public/main/install-cli.ps1 | iex
+irm https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-cli.ps1 | iex
 ```
 
 ### Install from Source
@@ -41,5 +41,5 @@ To uninstall:
 .\install-cli.ps1 uninstall
 
 # Windows (PowerShell - via web)
-iex "& { $(irm https://raw.githubusercontent.com/YOUR_GITHUB_ORG/temper-public/main/install-cli.ps1) } -Action uninstall"
+iex "& { $(irm https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-cli.ps1) } -Action uninstall"
 ```
