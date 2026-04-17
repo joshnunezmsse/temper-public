@@ -59,7 +59,7 @@ REM TemperMCP CLI Wrapper (${Lang})
 
 if "%TEMPER_LICENSE_KEY%"=="" set TEMPER_LICENSE_KEY=$DefaultKey
 if "%TEMPER_BILLING_URL%"=="" set TEMPER_BILLING_URL=https://api.tempermcp.dev/v1/heartbeat
-if "%TEMPER_IMAGE%"=="" set TEMPER_IMAGE=joshnunezmsse/temper-mcp:${Lang}
+if "%TEMPER_IMAGE%"=="" set TEMPER_IMAGE=joshnunez/temper-mcp:${Lang}
 
 docker run -i --rm -e TEMPER_ENV=production -e TEMPER_LICENSE_KEY="%TEMPER_LICENSE_KEY%" -e TEMPER_BILLING_URL="%TEMPER_BILLING_URL%" -v "%cd%:/code" "%TEMPER_IMAGE%"
 "@
