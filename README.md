@@ -38,6 +38,16 @@ irm https://raw.githubusercontent.com/joshnunezmsse/temper-public/main/install-c
 
 > **Note:** The installer will ask you which language probe you want to install (currently `js` for JavaScript/TypeScript). It will create an executable named `temper-mcp-js` on your system.
 
+### Upgrading
+
+Because TemperMCP runs securely inside a Docker container, you don't need to re-run the installation script to get updates. Simply tell Docker to pull the latest image:
+
+```bash
+docker pull joshnunez/temper-mcp:js
+```
+
+The next time your AI agent runs the tool, it will automatically use the updated version!
+
 ---
 
 ## 2. Licensing & Free Tier
@@ -93,6 +103,22 @@ TemperMCP works with any client that supports the Model Context Protocol. Becaus
 > **Note for Windows Users:** If your agent complains that it cannot find the `temper-mcp-js` command, you may need to provide the absolute path to the wrapper script (e.g., `C:\Users\YourName\.temper-mcp\bin\temper-mcp-js.cmd`).
 
 ---
+
+### Option C: Gemini Code Assist
+
+1. Depending on your IDE, locate your Gemini Code Assist MCP configuration (e.g., in your `.vscode/settings.json` or global IDE settings).
+2. Add the following server configuration to your MCP servers list:
+
+```json
+"temper-mcp-js": {
+  "command": "temper-mcp-js",
+  "env": {
+    "TEMPER_LICENSE_KEY": "tmcp_live_YOUR_KEY_HERE"
+  }
+}
+```
+
+3. **Restart your IDE** or reload the Gemini Code Assist extension. You can now prompt Gemini to use the `find_missing_tests` tool on your files!
 
 
 
